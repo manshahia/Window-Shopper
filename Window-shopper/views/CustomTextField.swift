@@ -14,6 +14,7 @@ class CustomTextField: UITextField {
         super.awakeFromNib()
         backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.4186108733)
         layer.cornerRadius = 5.0
+        textAlignment = .center
         
         if let p = placeholder
         {
