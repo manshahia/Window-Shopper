@@ -12,6 +12,11 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var hourlyWageTF: CustomTextField!
     @IBOutlet weak var itemPriceTF: CustomTextField!
+    
+    
+    @IBOutlet weak var calculatedHoursLbl: UILabel!
+    @IBOutlet weak var staticHoursLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,14 +28,38 @@ class MainVC: UIViewController {
         
         hourlyWageTF.inputAccessoryView = accessorryBtn
         itemPriceTF.inputAccessoryView = accessorryBtn
+        
+        calculatedHoursLbl.isHidden = true
+        staticHoursLbl.isHidden = true
     }
 
     @objc func calculate()
     {
-        print("Calculate was pressed")
+        if let wageTxt = hourlyWageTF.text, let itemPriceTxt = itemPriceTF.text {
+            if let wage = Double(wageTxt), let price = Double(itemPriceTxt)
+            {
+                view.endEditing(true)
+                
+                
+                calculatedHoursLbl.text = "\(Wage.calculate(forWage: wage, withPrice: price))"
+                
+                calculatedHoursLbl.isHidden = false
+                staticHoursLbl.isHidden = false
+            }
+            
+            
+        }
     }
     
 
-
+    @IBAction func clearCalculatePressed(_ sender: Any)
+    {
+        hourlyWageTF.text = ""
+        itemPriceTF.text = ""
+        calculatedHoursLbl.isHidden = true
+        staticHoursLbl.isHidden = true
+        
+    }
+    
 }
 

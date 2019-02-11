@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -43,28 +48,67 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l1-wz-s2V">
+                                <rect key="frame" x="16" y="306" width="343" height="79.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="58"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY8-AX-dKP">
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="r3y-TR-6KF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Clear calculator">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nr2-dH-pEi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg1-H4-9KS">
+                                <rect key="frame" x="141" y="393" width="92" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="UlC-Go-jgj"/>
+                                    <constraint firstAttribute="width" constant="92" id="hGi-Rz-DJS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NZD-tk-pZt" secondAttribute="trailing" id="3ep-P3-hCv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="stT-MD-Ibd" secondAttribute="trailing" constant="16" id="4xw-1n-Bog"/>
+                            <constraint firstItem="bg1-H4-9KS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="69H-2p-u44"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NZD-tk-pZt" secondAttribute="bottom" id="6rE-jH-pFf"/>
                             <constraint firstItem="uNi-LI-Nf1" firstAttribute="top" secondItem="stT-MD-Ibd" secondAttribute="bottom" constant="38" id="Cs1-Ud-oE0"/>
                             <constraint firstItem="uNi-LI-Nf1" firstAttribute="leading" secondItem="stT-MD-Ibd" secondAttribute="leading" id="Eoc-uv-nBF"/>
                             <constraint firstItem="stT-MD-Ibd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="KPE-po-D0x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bY8-AX-dKP" secondAttribute="bottom" constant="20" id="MZ0-Iy-Axu"/>
                             <constraint firstItem="NZD-tk-pZt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T73-ZZ-p8b"/>
+                            <constraint firstItem="4l1-wz-s2V" firstAttribute="top" secondItem="uNi-LI-Nf1" secondAttribute="bottom" constant="25" id="UeB-0i-5dt"/>
                             <constraint firstItem="uNi-LI-Nf1" firstAttribute="height" secondItem="stT-MD-Ibd" secondAttribute="height" id="XkO-Z7-FOX"/>
                             <constraint firstItem="sp6-GE-t1r" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="dYN-xI-DlO"/>
+                            <constraint firstItem="4l1-wz-s2V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hSG-3l-6cw"/>
+                            <constraint firstItem="bg1-H4-9KS" firstAttribute="top" secondItem="4l1-wz-s2V" secondAttribute="bottom" constant="8" id="jpE-no-1gx"/>
                             <constraint firstItem="uNi-LI-Nf1" firstAttribute="trailing" secondItem="stT-MD-Ibd" secondAttribute="trailing" id="k0q-Z8-oD6"/>
                             <constraint firstItem="sp6-GE-t1r" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l8K-tj-4lO"/>
                             <constraint firstItem="NZD-tk-pZt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m3Y-zA-InY"/>
                             <constraint firstItem="stT-MD-Ibd" firstAttribute="top" secondItem="sp6-GE-t1r" secondAttribute="bottom" constant="48" id="pXm-x3-xcb"/>
+                            <constraint firstItem="bY8-AX-dKP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pr2-iO-Uu6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bY8-AX-dKP" secondAttribute="trailing" constant="16" id="rIM-M3-x5P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4l1-wz-s2V" secondAttribute="trailing" constant="16" id="v5k-ad-LYM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="calculatedHoursLbl" destination="4l1-wz-s2V" id="Qx2-hX-Hlr"/>
                         <outlet property="hourlyWageTF" destination="stT-MD-Ibd" id="VP2-Zj-Tta"/>
                         <outlet property="itemPriceTF" destination="uNi-LI-Nf1" id="GrU-Jl-wjc"/>
+                        <outlet property="staticHoursLbl" destination="bg1-H4-9KS" id="0zc-n7-9q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -28,6 +28,7 @@ class CustomTextField: UITextField {
         
         if let p = placeholder
         {
+            print("Placeholder text is  \(p)")
             let place = NSAttributedString(string: p, attributes: [ .foregroundColor  : #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)])
             attributedPlaceholder = place
             textColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
