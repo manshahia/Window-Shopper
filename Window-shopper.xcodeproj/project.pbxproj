@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		3283CFA02211489F006DCDB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283CF9F2211489F006DCDB5 /* AppDelegate.swift */; };
-		3283CFA22211489F006DCDB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283CFA12211489F006DCDB5 /* ViewController.swift */; };
+		3283CFA22211489F006DCDB5 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283CFA12211489F006DCDB5 /* MainVC.swift */; };
 		3283CFA52211489F006DCDB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3283CFA32211489F006DCDB5 /* Main.storyboard */; };
 		3283CFA72211489F006DCDB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3283CFA62211489F006DCDB5 /* Assets.xcassets */; };
 		3283CFAA2211489F006DCDB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3283CFA82211489F006DCDB5 /* LaunchScreen.storyboard */; };
+		3283CFB422114E97006DCDB5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283CFB322114E97006DCDB5 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3283CF9C2211489F006DCDB5 /* Window-shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Window-shopper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3283CF9F2211489F006DCDB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3283CFA12211489F006DCDB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3283CFA12211489F006DCDB5 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		3283CFA42211489F006DCDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3283CFA62211489F006DCDB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3283CFA92211489F006DCDB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3283CFAB2211489F006DCDB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3283CFB322114E97006DCDB5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		3283CF9E2211489F006DCDB5 /* Window-shopper */ = {
 			isa = PBXGroup;
 			children = (
+				3283CFB222114E7A006DCDB5 /* views */,
+				3283CFB122114E72006DCDB5 /* controller */,
 				3283CF9F2211489F006DCDB5 /* AppDelegate.swift */,
-				3283CFA12211489F006DCDB5 /* ViewController.swift */,
 				3283CFA32211489F006DCDB5 /* Main.storyboard */,
 				3283CFA62211489F006DCDB5 /* Assets.xcassets */,
 				3283CFA82211489F006DCDB5 /* LaunchScreen.storyboard */,
 				3283CFAB2211489F006DCDB5 /* Info.plist */,
 			);
 			path = "Window-shopper";
+			sourceTree = "<group>";
+		};
+		3283CFB122114E72006DCDB5 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3283CFA12211489F006DCDB5 /* MainVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3283CFB222114E7A006DCDB5 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3283CFB322114E97006DCDB5 /* CustomTextField.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3283CFA22211489F006DCDB5 /* ViewController.swift in Sources */,
+				3283CFA22211489F006DCDB5 /* MainVC.swift in Sources */,
 				3283CFA02211489F006DCDB5 /* AppDelegate.swift in Sources */,
+				3283CFB422114E97006DCDB5 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
