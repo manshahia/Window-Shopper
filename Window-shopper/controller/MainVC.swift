@@ -32,7 +32,9 @@ class MainVC: UIViewController {
         calculatedHoursLbl.isHidden = true
         staticHoursLbl.isHidden = true
     }
-
+    
+    
+    
     @objc func calculate()
     {
         if let wageTxt = hourlyWageTF.text, let itemPriceTxt = itemPriceTF.text {
